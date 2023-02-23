@@ -34,13 +34,12 @@ def monkey_handler(monkey_list, monkey, i):
             case '-':
                 worry = value_one - value_two
 
-        if worry > 9699690:
-            worry = worry % 9699690
+        
+        worry = worry % 9699690
 
         test_success = worry % current_monkey['test'] == 0
 
         if test_success:
-            #worry = worry // current_monkey['test']
             monkey_list[current_monkey['true']]['items'].append(worry)
         
         else:
